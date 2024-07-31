@@ -97,7 +97,7 @@ async def fetch_pilots(interaction: discord.Interaction):
     # Fetch data from VATSIM API
     response = requests.get(VATSIM_API_URL)
     
-    if response.status_code == 200):
+    if response.status_code == 200:
         data = response.json()
         pilots_list = data.get('pilots', [])
 
@@ -125,7 +125,7 @@ async def fetch_controllers(interaction: discord.Interaction):
     # Fetch data from VATSIM API
     response = requests.get(VATSIM_API_URL)
     
-    if response.status_code == 200):
+    if response.status_code == 200:
         data = response.json()
         controllers_list = data.get('controllers', [])
 
@@ -152,7 +152,7 @@ async def fetch_servers(interaction: discord.Interaction):
     # Fetch data from VATSIM API
     response = requests.get(VATSIM_API_URL)
     
-    if response.status_code == 200):
+    if response.status_code == 200:
         data = response.json()
         servers_list = data.get('servers', [])
 
@@ -180,7 +180,7 @@ async def search_callsign(interaction: discord.Interaction, callsign: str):
     # Fetch data from VATSIM API
     response = requests.get(VATSIM_API_URL)
     
-    if response.status_code == 200):
+    if response.status_code == 200:
         data = response.json()
         callsign_upper = callsign.upper()
         
@@ -248,7 +248,7 @@ async def irl_search(interaction: discord.Interaction, callsign: str):
     url = f"{AIRPLANES_LIVE_API_URL}callsign/{callsign.upper()}"
     response = requests.get(url)
     
-    if response.status_code == 200):
+    if response.status_code == 200:
         data = response.json()
         aircraft = data.get('ac', [])
         
